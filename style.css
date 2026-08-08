@@ -1,0 +1,189 @@
+@charset 'UTF-8';
+
+:root {
+    --bg-blue: #bce0fd;
+    --brown: #403632;
+    --light-grey: #eee;
+    --white: #fff;
+    --oswald-font: 'Oswald', sans-serif;
+}
+
+/* 余白を個別に打ち消す */
+body, h1, h2, h3, p, ul, li, figure {
+    margin: 0;
+    padding: 0;
+}
+
+/* リストの黒丸を消す */
+ul {
+    list-style: none;
+}
+
+
+body {
+    color: var(--brown);
+    background-color: var(--white);
+    text-align: center;
+    font-family: sans-serif;
+}
+
+p {
+    line-height: 1.7;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.title {
+    font-family: var(--oswald-font);
+    font-size: min(10vw, 4rem);
+}
+
+.fadein {
+    opacity: 0;
+}
+
+.wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* ローディング画面 */
+#loading {
+  background-color: var(--light-grey);
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+
+#loading-screen {
+  background-color: var(--bg-blue);
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  translate: 0 100vh;
+}
+
+#loading p {
+    font-size: 2rem;
+    font-family: var(--oswald-font);
+}
+
+/* ヘッダー */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4.5rem;
+    background-color: var(--bg-blue);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+}
+
+.header-inner {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    text-align: left;
+}
+
+.logo {
+    font-family: var(--oswald-font);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* 開閉ボタン */
+.btn-menu {
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    z-index: 100;
+    padding: .5rem 1rem;
+    border: 1px solid var(--brown);
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    background-color: var(--white);
+    cursor: pointer;
+    transition: .4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-menu svg {
+    fill: var(--brown);
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+#menu-close {
+    border: 1px solid var(--bg-blue);
+    background-color: var(--brown);
+}
+
+#menu-close svg {
+    fill: var(--bg-blue);
+}
+
+/* スライドメニューパネル */
+#menu-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 101;
+    padding: 8rem 2rem 2rem;
+    width: max(32vw, 20rem);
+    height: 100vh;
+    background-color: var(--brown);
+    box-shadow: 0 0 2rem var(--brown);
+    font-family: var(--oswald-font);
+    translate: 100vw;
+}
+
+.menu-list {
+    list-style: none;
+}
+
+.menu-list li {
+    margin: 1.5rem 0;
+    opacity: 0;
+}
+
+.menu-list a {
+    color: var(--bg-blue);
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+/* フッター */
+.footer {
+    background-color: var(--bg-blue);
+    padding: 3rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* ホバー */
+@media(min-width: 800px) {
+    .btn-menu:hover {
+        background-color: var(--bg-blue);
+    }
+    #menu-close:hover svg {
+        fill: var(--brown);
+    }
+    .menu-list a:hover {
+        transition: .4s;
+        color: var(--bg-blue);
+    }
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CINEMA SITE</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="home.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- ローディング画面 -->
+  <div id="loading">
+    <p>LOADING...</p>
+    <div id="loading-screen"></div>
+  </div>
+
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">WCB CINEMAS</div>
+    </div>
+  </header>
+
+  <!-- メニュー -->
+  <nav>
+    <button id="menu-open" class="btn-menu">
+      <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <title>メニューを開く</title>
+        <path clip-rule="evenodd" d="m4.25 8c0-.41421.33579-.75.75-.75h14c.4142 0 .75.33579.75.75s-.3358.75-.75.75h-14c-.41421 0-.75-.33579-.75-.75zm0 4c0-.4142.33579-.75.75-.75h14c.4142 0 .75.3358.75.75s-.3358.75-.75.75h-14c-.41421 0-.75-.3358-.75-.75zm.75 3.25c-.41421 0-.75.3358-.75.75s.33579.75.75.75h14c.4142 0 .75-.3358.75-.75s-.3358-.75-.75-.75z" fill-rule="evenodd"/> 
+      </svg>
+    </button>
+    
+    <!-- メニューパネル -->
+    <div id="menu-panel">
+      <button id="menu-close" class="btn-menu">
+        <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <title>メニューを閉じる</title>
+          <path clip-rule="evenodd" d="m7.53033 6.46967c-.29289-.29289-.76777-.29289-1.06066 0s-.29289.76777 0 1.06066l4.46963 4.46967-4.46963 4.46967c-.29289.2929-.29289.7677 0 1.0606s.76777.2929 1.06066 0l4.46967-4.4696 4.4697 4.4696c.2929.2929.7677.2929 1.0606 0s.2929-.7677 0-1.0606l-4.4696-4.4697 4.4696-4.46967c.2929-.29289.2929-.76777 0-1.06066s-.7677-.29289-1.0606 0l-4.4697 4.46963z" fill-rule="evenodd"/>
+        </svg>
+      </button>
+      <ul class="menu-list">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="works.html">WORKS</a></li>
+        <li><a href="foods.html">FOOD & DRINK</a></li>
+        <li><a href="reserve.html">RESERVE</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ヒーローセクション -->
+  <section class="hero">
+    <h1 class="title">WCB CINEMAS</h1>
+  </section>
+
+  <!-- 推しポイント紹介セクション -->
+  <section class="features" id="features">
+    <div class="wrapper">
+      
+      <div class="feature-item fadein">
+        <div class="feature-media">
+          <img src="img/theater.jpg" alt="推しポイント画像1">
+        </div>
+        <div class="feature-content">
+          <h2>大迫力スクリーン</h2>
+          <p>最新の超高精細スクリーンと、視界いっぱいに広がる迫力の映像美。最先端の立体音響システムが全身を包み込み、まるで映画の世界に入り込んだかのような圧倒的な没入感をお届けします。</p>
+        </div>
+      </div>
+
+      <div class="feature-item reverse fadein">
+        <div class="feature-content">
+          <h2>ゆったり空間</h2>
+          <p>前後のスペースを贅沢に確保したプレミアム仕様のシートで、最後まで快適鑑賞。厳選素材を使用したオリジナルのシネマフード＆ドリンクとともに、至福のひとときをお過ごしいただけます。</p>
+        </div>
+        <div class="feature-media">
+          <img src="img/chair.jpg" alt="推しポイント画像2">
+        </div>
+      </div>
+
+      <div class="feature-item fadein">
+        <div class="feature-media">
+          <img src="img/popcorn.jpg" alt="推しポイント画像3">
+        </div>
+        <div class="feature-content">
+          <h2>充実したフード・ドリンク</h2>
+          <p>定番のポップコーンから限定メニューまで豊富なラインナップ！ここでしか手に入らないオリジナルグッズや、作品連動のイベント情報も随時更新中です。</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ニュースセクション -->
+  <section class="news" id="news">
+    <div class="wrapper">
+      <h2 class="title news-header-title fadein">ニュース</h2>
+      <div class="news-slider fadein">
+        
+        <article class="news-card">
+          <div class="news-img">
+            <img src="img/news1.jpg" alt="ニュース1">
+          </div>
+          <div class="news-body">
+            <span class="news-date">2026.08.01</span>
+            <p class="news-text">8月の上映スケジュールを公開しました。</p>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <div class="news-img">
+            <img src="img/news2.jpg" alt="ニュース2">
+          </div>
+          <div class="news-body">
+            <span class="news-date">2026.08.05</span>
+            <p class="news-text">夏の特別鑑賞キャンペーンを実施中です！</p>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <div class="news-img">
+            <img src="img/news3.jpg" alt="ニュース3">
+          </div>
+          <div class="news-body">
+            <span class="news-date">2026.08.07</span>
+            <p class="news-text">期間限定の新作ドリンクが登場。</p>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <div class="news-img">
+            <img src="img/news4.jpg" alt="ニュース4">
+          </div>
+          <div class="news-body">
+            <span class="news-date">2026.08.10</span>
+            <p class="news-text">上映会のチケット先行販売を開始します。</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <p>&copy; 2026 WCB CINEMA.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+@charset 'UTF-8';
+
+.foods-container {
+    padding-top: 7.5rem;
+    padding-bottom: 6rem;
+}
+
+.foods-layout {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.food-main-display {
+    flex: 1;
+    position: sticky;
+    top: 6rem;
+}
+
+.main-img-box {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background-color: var(--light-grey);
+    margin-bottom: 1.5rem;
+}
+
+.main-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.main-info-box {
+    text-align: left;
+}
+
+.main-food-title {
+    display: inline-block;
+    border: 1px solid var(--brown);
+    padding: 0.4rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: normal;
+    margin-bottom: 0.8rem;
+    width: 100%;
+    background-color: var(--white);
+}
+
+.main-food-price {
+    display: inline-block;
+    border: 1px solid var(--brown);
+    padding: 0.4rem 1.5rem;
+    font-size: 1.1rem;
+    width: 50%;
+    background-color: var(--white);
+}
+
+.food-list-scroll {
+    flex: 1.2;
+}
+
+.food-category {
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+.category-label {
+    display: inline-block;
+    border: 1px solid var(--brown);
+    padding: 0.2rem 1rem;
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.food-thumb {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: var(--light-grey);
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.food-thumb:hover {
+    opacity: 0.8;
+}
+
+.food-thumb.active {
+    border-color: var(--brown);
+    transform: scale(0.96);
+}
+
+.food-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .foods-layout {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .food-main-display {
+        position: static;
+        width: 100%;
+    }
+
+    .food-list-scroll {
+        width: 100%;
+    }
+}

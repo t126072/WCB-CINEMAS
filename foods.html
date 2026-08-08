@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FOOD & DRINK - CINEMA SITE</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="foods.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- ローディング画面 -->
+  <div id="loading">
+    <p>LOADING...</p>
+    <div id="loading-screen"></div>
+  </div>
+
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">WCB CINEMAS</div>
+    </div>
+  </header>
+
+  <!-- メニュー -->
+  <nav>
+    <button id="menu-open" class="btn-menu">
+      <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <title>メニューを開く</title>
+        <path clip-rule="evenodd" d="m4.25 8c0-.41421.33579-.75.75-.75h14c.4142 0 .75.33579.75.75s-.3358.75-.75.75h-14c-.41421 0-.75-.33579-.75-.75zm0 4c0-.4142.33579-.75.75-.75h14c.4142 0 .75.3358.75.75s-.3358.75-.75.75h-14c-.41421 0-.75-.3358-.75-.75zm.75 3.25c-.41421 0-.75.3358-.75.75s.33579.75.75.75h14c.4142 0 .75-.3358.75-.75s-.3358-.75-.75-.75z" fill-rule="evenodd"/> 
+      </svg>
+    </button>
+    
+    <div id="menu-panel">
+      <button id="menu-close" class="btn-menu">
+        <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <title>メニューを閉じる</title>
+          <path clip-rule="evenodd" d="m7.53033 6.46967c-.29289-.29289-.76777-.29289-1.06066 0s-.29289.76777 0 1.06066l4.46963 4.46967-4.46963 4.46967c-.29289.2929-.29289.7677 0 1.0606s.76777.2929 1.06066 0l4.46967-4.4696 4.4697 4.4696c.2929.2929.7677.2929 1.0606 0s.2929-.7677 0-1.0606l-4.4696-4.4697 4.4696-4.46967c.2929-.29289.2929-.76777 0-1.06066s-.7677-.29289-1.0606 0l-4.4697 4.46963z" fill-rule="evenodd"/>
+        </svg>
+      </button>
+      <ul class="menu-list">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="works.html">WORKS</a></li>
+        <li><a href="foods.html">FOOD & DRINK</a></li>
+        <li><a href="reserve.html">RESERVE</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- フード＆ドリンクセクション -->
+  <main class="foods-container wrapper">
+    
+    <div class="section-label-container">
+      <h2 class="section-label fadein">フード・ドリンク</h2>
+    </div>
+
+    <div class="foods-layout fadein">
+      
+      <div class="food-main-display">
+        <div class="main-img-box">
+          <img id="main-food-img" src="img/popcorn.jpg" alt="ポップコーン（塩味）">
+        </div>
+        <div class="main-info-box">
+          <h3 id="main-food-title" class="main-food-title">ポップコーン（塩味）</h3>
+          <p id="main-food-price" class="main-food-price">&yen; 450</p>
+        </div>
+      </div>
+
+      <div class="food-list-scroll">
+        
+        <!-- フードセクション -->
+        <div class="food-category">
+          <span class="category-label">フード</span>
+          <div class="food-grid">
+            <div class="food-thumb active" data-img="img/popcorn.jpg" data-title="ポップコーン（塩味）" data-price="&yen; 450">
+              <img src="img/popcorn.jpg" alt="ポップコーン（塩味）">
+            </div>
+            <div class="food-thumb" data-img="img/popcorn-caramel.jpg" data-title="キャラメルポップコーン" data-price="&yen; 500">
+              <img src="img/popcorn-caramel.jpg" alt="キャラメルポップコーン">
+            </div>
+            <div class="food-thumb" data-img="img/churros.jpg" data-title="チュロス" data-price="&yen; 400">
+              <img src="img/churros.jpg" alt="チュロス">
+            </div>
+            <div class="food-thumb" data-img="img/hotdog.jpg" data-title="ホットドッグ" data-price="&yen; 550">
+              <img src="img/hotdog.jpg" alt="ホットドッグ">
+            </div>
+            <div class="food-thumb" data-img="img/potato.jpg" data-title="フライドポテト" data-price="&yen; 420">
+              <img src="img/potato.jpg" alt="フライドポテト">
+            </div>
+            <div class="food-thumb" data-img="img/nachos.jpg" data-title="ナチョス" data-price="&yen; 480">
+              <img src="img/nachos.jpg" alt="ナチョス">
+            </div>
+            <div class="food-thumb" data-img="img/chicken.jpg" data-title="フライドチキン" data-price="&yen; 450">
+              <img src="img/chicken.jpg" alt="フライドチキン">
+            </div>
+          </div>
+        </div>
+
+        <!-- ドリンクセクション -->
+        <div class="food-category">
+          <span class="category-label">ドリンク</span>
+          <div class="food-grid">
+            <div class="food-thumb" data-img="img/cola.jpg" data-title="コーラ (M)" data-price="&yen; 350">
+              <img src="img/cola.jpg" alt="コーラ (M)">
+            </div>
+            <div class="food-thumb" data-img="img/melon-soda.jpg" data-title="メロンソーダ (M)" data-price="&yen; 350">
+              <img src="img/melon-soda.jpg" alt="メロンソーダ (M)">
+            </div>
+            <div class="food-thumb" data-img="img/orange.jpg" data-title="オレンジジュース (M)" data-price="&yen; 350">
+              <img src="img/orange.jpg" alt="オレンジジュース (M)">
+            </div>
+            <div class="food-thumb" data-img="img/tea.jpg" data-title="アイスティー (M)" data-price="&yen; 350">
+              <img src="img/tea.jpg" alt="アイスティー (M)">
+            </div>
+            <div class="food-thumb" data-img="img/coffee.jpg" data-title="ホットコーヒー" data-price="&yen; 380">
+              <img src="img/coffee.jpg" alt="ホットコーヒー">
+            </div>
+            <div class="food-thumb" data-img="img/beer.jpg" data-title="生ビール" data-price="&yen; 650">
+              <img src="img/beer.jpg" alt="生ビール">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <p>&copy; 2026 WCB CINEMA.</p>
+  </footer>
+
+</body>
+</html>

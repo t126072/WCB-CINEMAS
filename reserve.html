@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RESERVE - CINEMA SITE</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="reserve.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- ローディング画面 -->
+  <div id="loading">
+    <p>LOADING...</p>
+    <div id="loading-screen"></div>
+  </div>
+
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">WCB CINEMAS</div>
+    </div>
+  </header>
+
+  <!-- メニュー -->
+  <nav>
+    <button id="menu-open" class="btn-menu">
+      <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <title>メニューを開く</title>
+        <path clip-rule="evenodd" d="m4.25 8c0-.41421.33579-.75.75-.75h14c.4142 0 .75.33579.75.75s-.3358.75-.75.75h-14c-.41421 0-.75-.33579-.75-.75zm0 4c0-.4142.33579-.75.75-.75h14c.4142 0 .75.3358.75.75s-.3358.75-.75.75h-14c-.41421 0-.75-.3358-.75-.75zm.75 3.25c-.41421 0-.75.3358-.75.75s.33579.75.75.75h14c.4142 0 .75-.3358.75-.75s-.3358-.75-.75-.75z" fill-rule="evenodd"/> 
+      </svg>
+    </button>
+    
+    <div id="menu-panel">
+      <button id="menu-close" class="btn-menu">
+        <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <title>メニューを閉じる</title>
+          <path clip-rule="evenodd" d="m7.53033 6.46967c-.29289-.29289-.76777-.29289-1.06066 0s-.29289.76777 0 1.06066l4.46963 4.46967-4.46963 4.46967c-.29289.2929-.29289.7677 0 1.0606s.76777.2929 1.06066 0l4.46967-4.4696 4.4697 4.4696c.2929.2929.7677.2929 1.0606 0s.2929-.7677 0-1.0606l-4.4696-4.4697 4.4696-4.46967c.2929-.29289.2929-.76777 0-1.06066s-.7677-.29289-1.0606 0l-4.4697 4.46963z" fill-rule="evenodd"/>
+        </svg>
+      </button>
+      <ul class="menu-list">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="works.html">WORKS</a></li>
+        <li><a href="foods.html">FOOD & DRINK</a></li>
+        <li><a href="reserve.html">RESERVE</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 予約フォーム -->
+  <main class="reserve-container wrapper">
+    
+    <div class="section-label-container">
+      <h2 class="section-label fadein">予約フォーム</h2>
+    </div>
+
+    <!-- フォーム -->
+    <form class="reserve-form-box fadein" action="#" method="post" onsubmit="alert('予約が完了しました！'); return false;">
+      
+      <!-- お名前 -->
+      <div class="form-item">
+        <label>お名前</label>
+        <input type="text" name="name" placeholder="例) 山田 太郎">
+      </div>
+
+      <!-- メールアドレス -->
+      <div class="form-item">
+        <label>メールアドレス</label>
+        <input type="email" name="email" placeholder="例) example@example.com">
+      </div>
+
+      <!-- 作品 & 上映時間 -->
+      <div class="form-row">
+        <div class="form-item flex-2">
+          <label>作品</label>
+          <select name="movie">
+            <option value="" disabled selected>選択してください</option>
+            <option value="movie1">作品A</option>
+            <option value="movie2">作品B</option>
+            <option value="movie3">作品C</option>
+            <option value="movie4">作品D</option>
+            <option value="movie5">作品E</option>
+            <option value="movie6">作品F</option>
+            <option value="movie7">作品G</option>
+            <option value="movie8">作品H</option>
+            <option value="movie9">作品I</option>
+            <option value="movie10">作品J</option>
+            <option value="movie11">作品K</option>
+            <option value="movie12">作品L</option>
+            <option value="movie13">作品M</option>
+            <option value="movie14">作品N</option>
+            <option value="movie15">作品O</option>
+          </select>
+        </div>
+
+        <div class="form-item flex-1">
+          <label>上映時間</label>
+          <select name="time">
+            <option value="" disabled selected>選択してください</option>
+            <option value="10:00 - 12:15">10:00 - 12:15</option>
+            <option value="13:30 - 15:45">13:30 - 15:45</option>
+            <option value="18:00 - 20:15">18:00 - 20:15</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- 座席 -->
+      <div class="form-item form-item-short">
+        <label>座席</label>
+        <select name="seat">
+          <option value="" disabled selected>選択してください</option>
+          <option value="A-1">A-1 (前方)</option>
+          <option value="A-2">A-2 (前方)</option>
+          <option value="B-3">B-3 (中央)</option>
+          <option value="B-4">B-4 (中央)</option>
+          <option value="C-5">C-5 (後方)</option>
+        </select>
+      </div>
+
+      <!-- お問い合わせ -->
+      <div class="form-item">
+        <label>お問い合わせ（任意）</label>
+        <textarea name="message" rows="4" placeholder="ご質問などがあればご記入ください。"></textarea>
+      </div>
+
+      <!-- 送信ボタン -->
+      <div class="form-submit-container">
+        <button type="submit" class="submit-btn">予約する</button>
+      </div>
+
+    </form>
+
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <p>&copy; 2026 WCB CINEMA.</p>
+  </footer>
+
+</body>
+</html>
